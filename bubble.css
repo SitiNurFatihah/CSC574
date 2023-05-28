@@ -1,0 +1,124 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+     background-attachment: fixed;
+}
+h1{
+    margin: auto;
+    text-align: center; 
+    font-size:80px ;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(218, 178, 3); text-shadow: -5px 0 rgb(14, 51, 1), 2px 0 rgb(14, 51, 1);
+}
+.bx{
+    justify-content: center;
+    display: flex;
+}
+.center{
+    text-align: center;
+}
+
+  /* Align Image*/
+  * {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    text-align: center;
+  }
+
+    /* Image*/
+    img{
+      border-radius: 50%;
+    }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Navigatonal Bar*/
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+    border-right:1px solid #bbb;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(246, 250, 242);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #116b15;
+  }
+  
+  .active {
+    background-color: #c4bb42;
+  }
+
+  .item{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    outline-style: outset;
+    background-color: darkslategray;
+    border-style: outset;color: black;
+    
+  }
+
+  /*3rd and 4th text style*/
+  h2{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(6, 75, 63);
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 0 12px rgb(250, 242, 134);
+    font-style: italic;
+  }
+  /*submit button 4th page*/
+  .sbmt {
+    background-color: #3f5f54;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+    border-style: outset; color: #f7f4f4;
+  }
+
+  .abt{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width:70% ;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .price{
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }

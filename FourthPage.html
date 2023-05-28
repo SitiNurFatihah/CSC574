@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customer's Details</title>
+        <link rel = "stylesheet" href = "bubble.css">
+        <style>body{ background-image: url(Untitled\ design.png); }</style>
+    </head>
+    <body>
+        <fieldset>
+            <legend><h2>Check Out Form</h2></legend>
+        <form action="submit.php" method="post"  enctype="multipart/form-data">
+        <div class="billAdd" style="font-size: 150%;">
+    
+            <p style="font-size: xx-large; 
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+            >Billing Address</p>
+                <label for fname><i class="fa fa-user"></i>Full Name<br></label>
+                <input type="text" id="fname" name="firstname"><br>
+                <label for phone><i class="fa fa-phone"></i>No. Phone<br></label>
+                <input type="number" id="phone" name="phonenumber"placeholder="xxxxxxxxxx"><br>
+                <label for="email"><i class="fa fa-envelope"></i> Email<br></label>
+                <input type="text" id="email" name="email" placeholder="xxxx@example.com"><br>
+                <label for="adr"><i class="fa fa-address-card-o"></i> Address<br></label>
+                <input type="text" id="adr" name="address" ><br>
+                <label for="city"><i class="fa fa-institution"></i> City<br></label>
+                <input type="text" id="city" name="city"><br>
+                <label for="state">State<br></label>
+                <input type="text" id="state" name="state">
+        </div>
+            <input type="submit" value="Submit" class="sbmt">
+        </form>
+        </fieldset>
+        
+        
+        
+     
+
+    </body>
+    
+</html>

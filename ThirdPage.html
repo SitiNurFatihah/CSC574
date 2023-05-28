@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>Check Out Page</title>
+        <link rel = "stylesheet" href = "bubble.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style>
+            body{ background-image: url(bck.jpg);}
+        </style>
+        
+    </head>
+    <body>
+        <ul>
+            <li><a class="active" href="SecondPage.html">Home</a></li>
+            <li><a href="ThirdPage.html">Order Here</a></li>
+            <li><a href="FirstPage.html">Exit</a></li>
+            <li style="float:right"><a href="FivePage.html">About</a></li>
+        </ul>
+
+        <h2>Your Cart</h2>
+
+        <table class="item">
+            <tr>
+             <th>No.</th>
+             <th>Items</th>
+             <th>Quantity</th>
+             <th>Price</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Broccoli</td>
+                <td><label for="qB"></label>
+                <input type="number" id="qB" onchange="calculateB()" 
+                style="background-color: rgb(73, 75, 70);"></td>
+                <td><span id="totalBroccoli">RM0.00</span></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Grape</td>
+                <td><label for ="qG"></label>
+                <input type="number" id="qG" onchange="calculateG()"
+                style="background-color: rgb(73, 75, 70);"></td>
+                <td><span id="totalGrape">RM0.00</span></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Pear</td>
+                <td><label for ="qP"></label>
+                <input type="number" id = "qP" onchange="calculateP()"
+                style="background-color: rgb(73, 75, 70);"></td>
+                <td><span id="totalPear">RM0.00</span></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Kiwi</td>
+                <td><label for ="qK"></label>
+                <input type="number" id = "qK" onchange ="calculateK()"
+                style="background-color: rgb(73, 75, 70);"></td>
+                <td><span id ="totalKiwi">RM0.00</span></td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Mushroom</td>
+                <td><label for = "qM"></label>
+                <input type="number" id="qM" onchange = "calculateM()"
+                style="background-color: rgb(73, 75, 70);"></td>
+                <td><span id ="totalMus">RM0.00</span></td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Lettuce</td>
+                <td><label for ="qL"></label>
+                <input type="number" id="qL" onchange="calculateL()"
+                style="background-color: rgb(73, 75, 70);"></td>
+                <td><span id="totalLett">RM0.00</span></td>
+            </tr>
+            <tr>
+                <td colspan="3">Total Price:</td>
+                <td><span id="totalP">RM0.00</span></td>
+            </tr>
+        </table>
+        
+        <script>
+    
+        var totalBroccoli=0;
+        var totalGrape=0;
+        var totalPear=0;
+        var totalKiwi=0;
+        var totalMus=0;
+        var totalLett=0;
+
+        //Calculate Broccoli
+        function calculateB() {
+        var qB = parseInt(document.getElementById("qB").value);
+        if (qB<= 0 || isNaN(qB)) {
+            document.getElementById("qB").value = "";
+            document.getElementById("totalBroccoli").textContent = "RM0.00";
+            totalBroccoli=0;
+        }
+        else{
+            var costBroccoli = 3.20;
+            totalBroccoli = qB * costBroccoli;
+            document.getElementById("totalBroccoli").textContent = "RM" + totalBroccoli.toFixed(2);
+            
+        }
+        calculateTotal();
+        }
+
+        //Calculate Grape
+        function calculateG() {
+        var qG = parseInt(document.getElementById("qG").value);
+        if (qG<= 0 || isNaN(qG)) {
+            document.getElementById("qG").value = "";
+            document.getElementById("totalGrape").textContent = "RM0.00";
+            totalGrape=0;
+        }
+        else {
+            var costGrape= 10.00;
+            totalGrape = qG * costGrape;
+            document.getElementById("totalGrape").textContent = "RM" + totalGrape.toFixed(2);
+        }
+          calculateTotal();
+        }
+
+        //Calculate Pear
+        function calculateP() {
+        var qP = parseInt(document.getElementById("qP").value);
+        if (qP<= 0 || isNaN(qP)) {
+            document.getElementById("qP").value = "";
+            document.getElementById("totalPear").textContent = "RM0.00";
+            totalPear=0;
+        }
+        else {
+            var costPear = 12.20;
+            totalPear = qP * costPear;
+            document.getElementById("totalPear").textContent = "RM" + totalPear.toFixed(2);
+        }
+        calculateTotal();
+        }
+        
+
+        //Calculate Kiwi
+        function calculateK(){
+        var qK = parseInt(document.getElementById("qK").value);
+        if (qK<= 0 || isNaN(qK)) {
+            document.getElementById("qK").value = "";
+            document.getElementById("totalKiwi").textContent = "RM0.00";
+            totalKiwi=0;
+        }
+        else {
+            var costKiwi = 9.20;
+            totalKiwi = qK * costKiwi;
+            document.getElementById("totalKiwi").textContent = "RM" + totalKiwi.toFixed(2);
+        }
+        calculateTotal();
+        }
+
+        //Calculte Mushroom
+        function calculateM(){
+        var qM = parseInt(document.getElementById("qM").value);
+        if (qM<= 0 || isNaN(qM)) {
+            document.getElementById("qM").value = "";
+            document.getElementById("totalMus").textContent = "RM0.00";
+            totalMus=0;
+        }
+        else {
+            var costMus = 2.20;
+            totalMus= qM * costMus;
+            document.getElementById("totalMus").textContent ="RM" + totalMus.toFixed(2);
+        }
+        calculateTotal();
+        }
+
+        //CalculateLettuce
+        function calculateL(){
+        var qL = parseInt(document.getElementById("qL").value);
+        if (qL<= 0 || isNaN(qL)) {
+            document.getElementById("qL").value = "";
+            document.getElementById("totalLett").textContent = "RM0.00";
+            totalLett=0;
+        }
+        else {
+            var costLet=1.80;
+            totalLett= qL *costLet;
+            document.getElementById("totalLett").textContent="RM" + totalLett.toFixed(2);
+        }
+        calculateTotal();
+        }
+
+        //Total Price
+        function calculateTotal() {
+             var totalP = totalBroccoli + totalGrape + totalPear + totalKiwi + totalMus + totalLett;
+             document.getElementById("totalP").textContent = "RM" + totalP.toFixed(2);
+        }
+
+        </script>
+        <br><div class="bx">
+        <a href="FourthPage.html" target="">
+        <button type="button" 
+        style="height:50px;width: 120px;background-color:darkslategrey;
+        border-color:rgb(27, 27, 26);font-size:medium;color: white;"
+        >Pay</button><br>
+        </div>
+
+    </body>
+    
+</html>
